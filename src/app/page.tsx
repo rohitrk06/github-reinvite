@@ -258,7 +258,9 @@ export default function Page() {
             </label>
             <select 
               value={permission} 
-              onChange={e => setPermission(e.target.value as "pull"|"triage"|"push"|"maintain"|"admin")}
+              // onChange={e => setPermission(e.target.value as "pull"|"triage"|"push"|"maintain"|"admin")}
+              onChange={e => setPermission(e.target.value as "push")}
+
               style={{
                 padding: "0.875rem 1rem",
                 border: "2px solid #e5e7eb",
@@ -272,11 +274,11 @@ export default function Page() {
               onFocus={(e) => e.target.style.borderColor = "#8B0000"}
               onBlur={(e) => e.target.style.borderColor = "#e5e7eb"}
             >
-              <option value="pull">📖 Pull (Read)</option>
-              <option value="triage">🔍 Triage</option>
+              {/* <option value="pull">📖 Pull (Read)</option>
+              <option value="triage">🔍 Triage</option> */}
               <option value="push">✏️ Push (Write)</option>
-              <option value="maintain">🔧 Maintain</option>
-              <option value="admin">👑 Admin</option>
+              {/* <option value="maintain">🔧 Maintain</option>
+              <option value="admin">👑 Admin</option> */}
             </select>
           </div>
 
